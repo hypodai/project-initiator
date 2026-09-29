@@ -1,0 +1,8 @@
+{
+  "name": "stack-planner",
+  "description": "Turn a software idea into an evidence-backed tech stack, cost and hardware plan, and an agent-ready repository with AGENTS.md, backlog, changelog and ADRs.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Michael Silhavy"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "skill_name": "stack-planner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "chci udelat vibe coded fitness appku na mobily. sleduje treninky, napoji se na chytre hodinky a chci to prodavat jako predplatne. neumim programovat, mam claude code a windows notebook. rozpocet par stovek korun mesicne.",
+      "expected_output": "Czech conversation and blueprint. Interview asks about platforms and which watches (HealthKit / Health Connect), offline, subscriptions via app stores. Flags that iOS builds need macOS or a cloud build service (hardware). Health data treated as special-category data under GDPR. App-store in-app purchase rules for subscriptions. Costs include developer accounts and free-tier cliffs. Recommends professional review before handling real health data and payments.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're two TypeScript devs building a B2B SaaS for construction companies to track equipment rentals across sites. Needs multi-tenant, EU data residency, SSO for bigger customers eventually, and an offline-capable mobile view for site managers. Infra budget around 300 EUR/month at launch.",
+      "expected_output": "Multi-tenancy and tenant isolation addressed; SSO pricing tiers of auth providers verified; EU residency checked on every sub-processor; offline sync researched as its own concern; costs at 300 EUR ceiling; B2B practices (audit logs, SOC 2 path) in RISKS/AGENTS.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our accounting team approves about 400 supplier invoices a month over email. I want to automate it: pull invoices from a shared mailbox, extract the data, route approvals by amount and cost centre, then push approved invoices into our ERP (Pohoda). Internal tool, nobody in-house can code, company is on Microsoft 365.",
+      "expected_output": "Considers integration/automation platforms and Microsoft-ecosystem options against custom code; researches Pohoda's integration options (XML/mServer) with sources; document extraction options compared on accuracy and price per page; audit trail and four-eyes approval as finance practices; data residency for invoice data sent to AI; realistic maintenance story for a non-coding team.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Solo dev, very comfortable with Next.js and React. I want to ship an MVP in two weeks: landing page with waitlist, then a simple tool where users upload a CV and get AI feedback. Top priority is speed to launch, then few vendors. US hosting is fine, budget isn't a concern at this stage.",
+      "expected_output": "Control case: common default picks (e.g. Next.js, Vercel, a BaaS) may legitimately win given the builder's skills and priorities. The skill should still show at least two researched alternatives per such layer and a default-bias check sentence, but must not reject the familiar stack just to be different. Quick or standard depth, short interview.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I'd like to build an automatic plant watering system for my balcony: soil moisture sensors, a pump, and a phone app that shows moisture history and lets me water manually. I have a Raspberry Pi 4 lying around. Want it to work even when my home internet is down.",
+      "expected_output": "Hardware-heavy plan: sensors, pump, relay/driver, power, board choice (Pi vs microcontroller) with prices and sources; local-first architecture that works offline; OTA/update path and no default passwords; app options compared (native, PWA, Home Assistant-style dashboards); costs mostly one-off hardware.",
+      "files": []
+    }
+  ]
+}

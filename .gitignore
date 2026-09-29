@@ -1,0 +1,11 @@
+# eval run outputs
+evals/runs/
+*-workspace/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+.env*
