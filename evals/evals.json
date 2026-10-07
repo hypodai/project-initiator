@@ -10,7 +10,7 @@
     {
       "id": 2,
       "prompt": "We're two TypeScript devs building a B2B SaaS for construction companies to track equipment rentals across sites. Needs multi-tenant, EU data residency, SSO for bigger customers eventually, and an offline-capable mobile view for site managers. Infra budget around 300 EUR/month at launch.",
-      "expected_output": "Multi-tenancy and tenant isolation addressed; SSO pricing tiers of auth providers verified; EU residency checked on every sub-processor; offline sync researched as its own concern; costs at 300 EUR ceiling; B2B practices (audit logs, SOC 2 path) in RISKS/AGENTS.",
+      "expected_output": "English conversation and blueprint. Multi-tenancy and tenant isolation addressed; SSO pricing tiers of auth providers verified; EU residency checked on every sub-processor; offline sync researched as its own concern; costs at 300 EUR ceiling; B2B practices (audit logs, SOC 2 path) in RISKS/AGENTS.",
       "files": []
     },
     {
@@ -29,6 +29,24 @@
       "id": 5,
       "prompt": "I'd like to build an automatic plant watering system for my balcony: soil moisture sensors, a pump, and a phone app that shows moisture history and lets me water manually. I have a Raspberry Pi 4 lying around. Want it to work even when my home internet is down.",
       "expected_output": "Hardware-heavy plan: sensors, pump, relay/driver, power, board choice (Pi vs microcontroller) with prices and sources; local-first architecture that works offline; OTA/update path and no default passwords; app options compared (native, PWA, Home Assistant-style dashboards); costs mostly one-off hardware.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Ich möchte eine Buchungs-App für meinen Friseursalon bauen: Kunden buchen Termine online, bekommen eine Erinnerung per SMS, und ich sehe alles im Kalender. Ich kann nicht programmieren, nutze aber Claude Code. Budget maximal 50 Euro im Monat.",
+      "expected_output": "Language test (German). Every question, default, summary and every generated document (blueprint, AGENTS.md, backlog, ADRs, README, CHANGELOG) in German, with no leftover English template prose; file names, task IDs and commit messages in English. Compares ready-made booking SaaS against a custom build honestly. SMS per-message costs, GDPR for customer data, costs in EUR (plus USD).",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "chci postavit interní nástroj na evidenci služebních aut ve firmě (rezervace, kniha jízd, servisní termíny). Mluv se mnou česky, ale celé repo včetně dokumentace piš anglicky, bude na tom dělat i kolega z Indie.",
+      "expected_output": "Language override test. Conversation in Czech throughout; every file written into the project in English, including blueprint, AGENTS.md and backlog. AGENTS.md and CLAUDE.md record conversation language Czech and docs language English. Step-8 summary states the documents' language. Costs in CZK plus USD.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Quero criar um app de delivery para a padaria da minha família em Belo Horizonte. Clientes pedem pelo celular e pagam com Pix. Sou desenvolvedor júnior, sei um pouco de JavaScript.",
+      "expected_output": "Language and locale test (Brazilian Portuguese). Conversation and documents in Portuguese. Region-aware research: Pix and Brazilian payment providers found via searches in Portuguese, LGPD instead of only GDPR, costs in BRL plus USD. No EU assumptions.",
       "files": []
     }
   ]

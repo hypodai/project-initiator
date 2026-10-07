@@ -21,8 +21,8 @@ For each edge, find out:
   third-party auth provider).
 - Runtime compatibility (language, Node vs edge vs serverless limits, native
   modules).
-- Region alignment — data in the EU is pointless if one component processes
-  it in another region.
+- Region alignment — keeping data in the required region is pointless if one
+  component processes it somewhere else.
 - Data transfer / egress costs between providers.
 - Rate limits that one side can hit because of the other.
 

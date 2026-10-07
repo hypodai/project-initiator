@@ -5,6 +5,9 @@ messages. The user came here so they would *not* have to ping-pong with an AI.
 
 ## Rules
 
+- Ask in the user's language (see "Language" in `SKILL.md`). The questions,
+  defaults and quoted prompts below are English reference wording — translate
+  the substance naturally, don't paste them.
 - Ask in one message per round. Number the questions so the user can answer
   "1: …, 3: ok, rest ok".
 - Every question carries a suggested default in brackets. Pick the default
@@ -30,8 +33,8 @@ Adapt the wording to the idea; keep the substance.
 6. **Timeline and ambition** — first usable version by when; prototype to
    validate an idea, or something that must run in production?
 7. **Constraints** — sensitive data (health, money, children, personal data),
-   where data must live (EU?), regulated industry, company IT rules, offline
-   use.
+   where users are and where data must live (a country or region such as the
+   EU, US, UK…), regulated industry, company IT rules, offline use.
 8. **Priorities** — rank these (top three is enough): low cost · speed to
    launch · simplicity / few vendors · scalability · no lock-in ·
    performance · best-in-class quality · data privacy.
@@ -86,8 +89,8 @@ that wouldn't change anything is not worth the user's time.
 ### AI features
 - What should the AI do: chat, extraction from documents, generation,
   classification, agents that take actions?
-- Can data leave the EU / be sent to an AI provider? Any need to run models
-  locally?
+- Can data leave its country or region / be sent to an AI provider? Any need
+  to run models locally?
 - Expected volume (requests per user per day)?
 
 ### Realtime, notifications, content

@@ -50,6 +50,10 @@ Just describe what you want to build:
 Ask for `quick` or `deep` depth if you want less or more research than the
 default.
 
+Write in any language — the interview, the summary and every generated
+document follow the language you use. Want to chat in one language and get
+the repository in another (say, for an international team)? Just say so.
+
 ## What you get
 
 ```

@@ -8,4 +8,5 @@ The full agent playbook is in `AGENTS.md` — read it first.
 - Why the stack looks like this: `docs/blueprint/DECISIONS.md`
 - Setup steps: `docs/blueprint/SETUP.md`
 - Verify before committing: {{verify_commands}}
-- Communicate in {{conversation_language}}; code and commits in English.
+- Communicate in {{conversation_language}}; docs in {{docs_language}}; code
+  and commits in English.

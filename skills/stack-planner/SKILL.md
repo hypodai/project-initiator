@@ -30,7 +30,7 @@ covered below, decide by these.
   `references/scoring.md`.
 - **Fit beats fame.** The user's ranked priorities decide the weights. A tool
   that is "the best" in general can be the wrong choice for a non-developer on
-  a 20 EUR/month budget.
+  a hobby-sized monthly budget.
 - **The package matters more than the parts.** Five individually excellent
   components that integrate badly are a worse stack than five good ones with
   official integrations between them.
@@ -41,8 +41,40 @@ covered below, decide by these.
 - **Ask only what changes the answer.** A question earns its place only if
   different answers would lead to a different recommendation. Everything else
   becomes a stated assumption.
-- **Language.** Talk to the user and write the blueprint in their language.
-  Keep file names, code identifiers and commit messages in English.
+
+## Language
+
+The skill works in any language. Everything in this skill — instructions,
+example questions, templates — is written in English only because it has to
+be written in something; none of that wording is meant to reach the user
+as-is.
+
+- **Detect** the language from the user's own words in the request (not from
+  the OS, locale, file names or quoted material). If the request mixes
+  languages, use the one the user writes their sentences in.
+- **Use it for everything the user reads:** questions and their defaults,
+  progress notes, the summary in step 8, and every document written into the
+  new project — blueprint, `AGENTS.md`, `CLAUDE.md`, `README.md`, backlog
+  tasks, ADRs, `CHANGELOG.md`. Translate the templates' prose and headings;
+  don't paste their English wording.
+- **Explicit wishes win.** If the user asks for a different language — for the
+  conversation, for the documents, or both (a common case: chat in their own
+  language, repository in English for an international team) — follow it
+  from that point on. In step 8, state the documents' language in one line so
+  the user can change it without an extra round of questions.
+- **Stays English by convention:** file and folder names, code identifiers,
+  task IDs, commit messages, and the anchor headings agents look for
+  (`Definition of Done`, `Hard gates`). Say so once; if the user wants
+  commits in their language too, do that.
+- **Research** in whatever language finds the best sources — usually English
+  for global tools, plus the user's language for local providers, local law
+  and local prices. Report the findings in the user's language; source titles
+  stay as published.
+- **Locale details** follow the user's language and region: currency (plus
+  USD, see `references/costs-hardware.md`), number and date formats.
+- **Record the choice.** The new project's `AGENTS.md` and `CLAUDE.md` name
+  the conversation and documentation language, so every later agent session
+  keeps it.
 
 ## Depth
 
@@ -120,6 +152,7 @@ In chat, keep it short:
 - the three biggest risks
 - monthly cost at launch and at the growth horizon
 - the hardware the user needs to buy or rent, if any
+- the language the project documents will be written in
 
 Then ask where to create the project (default `./<project-slug>`), whether to
 initialise git, and whether to create a **private** GitHub repository. Never
@@ -148,6 +181,8 @@ Before handing over, verify:
 - the backlog's first tasks match `SETUP.md` order
 - `AGENTS.md` contains the stack, the industry-specific practices from
   `RISKS.md`, and the hard gates relevant to this project
+- every document is in the agreed language, with no untranslated template
+  prose left over
 
 Fix what fails; don't just report it.
 

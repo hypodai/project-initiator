@@ -117,7 +117,7 @@ builder, exit path.
 **Covers:** error tracking, logs, uptime monitoring, analytics, backups,
 alerting.
 **Criteria:** who responds to incidents, privacy of analytics (cookie
-consent in the EU), cost at volume.
+consent rules where the users are, e.g. in the EU), cost at volume.
 
 ## Dev workflow (always present)
 

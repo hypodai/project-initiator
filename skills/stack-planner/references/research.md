@@ -20,7 +20,7 @@ Useful query shapes (adapt to the project, add the current year):
 
 - `best <category> for <use case> <year>`
 - `<prior> alternatives`, `<prior> vs <candidate>`
-- `<category> comparison <constraint>` — e.g. "EU hosted", "self-hosted",
+- `<category> comparison <constraint>` — e.g. "hosted in <region>", "self-hosted",
   "open source", "for non-developers", "cheap"
 - developer surveys and rankings for the category (State of JS / HTML /
   React Native, Stack Overflow Developer Survey, DB-Engines, ThoughtWorks
@@ -32,8 +32,10 @@ Useful query shapes (adapt to the project, add the current year):
 Deliberately include, when relevant:
 
 - at least one open-source or self-hostable option
-- at least one option from outside the usual US-startup ecosystem when the
-  user has EU residency or local-market needs
+- at least one regional or local provider when the user has data-residency
+  or local-market needs (e.g. EU hosting, a local payment method, a national
+  accounting system) — search in the user's language too, local options
+  rarely rank in English results
 - at least one option that is **not** in the reflex list in `scoring.md`
 
 ## Evidence per candidate

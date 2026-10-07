@@ -74,9 +74,13 @@ Templates live in `assets/templates/`:
 | `project/github/*` | `.github/` (stored without the dot so packaging keeps it) |
 
 Replace every `{{…}}` placeholder;
-delete sections that don't apply rather than leaving them empty. Write prose
-in the user's language; keep headings that agents rely on (`Definition of
-Done`, `Hard gates`, task IDs) recognisable.
+delete sections that don't apply rather than leaving them empty. The
+templates are in English; write the documents in the agreed documentation
+language (see "Language" in `SKILL.md`) — translate prose and headings, keep
+the anchors agents rely on (`Definition of Done`, `Hard gates`, task IDs)
+recognisable, e.g. as `Definition of Done (<translation>)`. Fill
+`{{conversation_language}}` and `{{docs_language}}` so later agent sessions
+keep the same languages.
 
 ### AGENTS.md
 
@@ -132,14 +136,14 @@ advice; say so in `RISKS.md`.
 
 | When the project… | Practices to include |
 |-------------------|---------------------|
-| handles any personal data of EU residents | GDPR: data minimisation, lawful basis, privacy policy, DPA with every processor, EU region where required, export and deletion on request |
-| handles health or biometric data | special-category data under GDPR (explicit consent, DPIA), HIPAA if US patients, encryption at rest and in transit, no health data in logs or analytics |
+| handles any personal data | the privacy law of every country where users live — e.g. GDPR (EU/EEA), UK GDPR, CCPA/CPRA (California), LGPD (Brazil), PIPEDA (Canada), APPI (Japan), DPDP Act (India): data minimisation, lawful basis, privacy policy, processor agreements (DPA), required data region, export and deletion on request |
+| handles health or biometric data | special-category data under GDPR (explicit consent, DPIA), HIPAA if US patients, local health-data rules elsewhere, encryption at rest and in transit, no health data in logs or analytics |
 | takes payments | never touch raw card data (hosted checkout / provider SDK keeps PCI scope minimal), webhook signature verification, idempotency, app-store in-app purchase rules for digital goods in mobile apps |
 | targets children | COPPA (US), age-appropriate design / GDPR rules for minors, no behavioural ads |
 | has AI features | EU AI Act transparency duties where applicable, prompt-injection defences, human review for consequential decisions, evaluation set for quality, cost limits per user |
 | is a web app | OWASP Top 10, WCAG 2.2 AA accessibility, security headers, dependency updates |
 | is a mobile app | app store review guidelines, privacy labels / data safety forms, permission minimisation, crash reporting |
-| is public-sector or sells to it | accessibility obligations (EN 301 549 in the EU), procurement / security certifications |
+| is public-sector or sells to it | accessibility obligations (e.g. EN 301 549 in the EU, Section 508 in the US), procurement / security certifications |
 | is B2B SaaS | tenant isolation tests, audit logs, SSO readiness, SOC 2 / ISO 27001 path if customers will ask |
 | runs devices / IoT | secure boot and OTA updates, no default passwords, EU Cyber Resilience Act and radio rules where relevant |
 | automates finance or accounting | audit trail, four-eyes approval, reconciliation, retention periods required by local law |

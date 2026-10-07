@@ -22,8 +22,9 @@ autonomous background work.
    messages in English, focused on why.
 3. **Docs:** every task adds a line to `CHANGELOG.md` under `[Unreleased]`;
    architectural decisions get an ADR in `docs/adr/`.
-4. **Language:** {{conversation_language}} with the user; code, identifiers
-   and commit messages in English.
+4. **Language:** talk to the user in {{conversation_language}}; write docs,
+   backlog tasks, ADRs and the changelog in {{docs_language}}; code,
+   identifiers and commit messages in English.
 
 ## Stack
 
