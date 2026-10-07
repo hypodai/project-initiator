@@ -151,6 +151,6 @@ advice; say so in `RISKS.md`.
 ## After writing
 
 1. `git init -b main`, stage everything, commit
-   `chore: bootstrap project from stack-planner blueprint` — if the user agreed.
+   `chore: bootstrap project from project-initiator blueprint` — if the user agreed.
 2. If agreed and authenticated: `gh repo create <name> --private --source . --push`.
 3. Run the self-check from `SKILL.md` step 10.

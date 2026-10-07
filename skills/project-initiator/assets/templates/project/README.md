@@ -2,7 +2,7 @@
 
 {{one_paragraph_idea}}
 
-**Status:** planning — bootstrapped from a stack-planner blueprint on
+**Status:** planning — bootstrapped from a project-initiator blueprint on
 {{date}}.
 
 ## Stack

@@ -1,9 +1,9 @@
 ---
-name: stack-planner
+name: project-initiator
 description: Turns a software idea into an evidence-backed project plan and an agent-ready repository. Runs a short discovery interview, researches the current market for every layer of the stack with dated sources, scores candidates against the user's own priorities instead of defaulting to the usual LLM picks, checks that the chosen components work together as a package, maps hardware needs and costs, then bootstraps a GitHub-structured project with AGENTS.md, CLAUDE.md, backlog, changelog and ADRs. Use this whenever someone wants to build an app, SaaS, internal tool, automation, AI agent, device or any other software project and asks what stack to use, how to start, how to set it up for vibe coding or Claude Code, what it will cost or what hardware they need — even if they only describe the idea ("I want to make a fitness app", "chci automatizovat schvalování faktur") and never say "tech stack".
 ---
 
-# Stack Planner
+# Project Initiator
 
 A plain LLM answer to "what stack should I use for X" is fast and generic: no
 questions asked, the same handful of popular tools every time, prices from

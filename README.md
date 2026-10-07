@@ -1,11 +1,11 @@
-# stack-planner
+# project-initiator
 
 A Claude Code skill that turns a software idea into an evidence-backed plan
 and an agent-ready repository.
 
 Ask a plain LLM "what stack should I use for a fitness app" and you get the
 same few popular tools, prices from memory, and nothing about whether the
-pieces fit together. `stack-planner` works like a technology consultant
+pieces fit together. `project-initiator` works like a technology consultant
 instead:
 
 1. **Interviews you** — one round of core questions, an invitation to share
@@ -31,11 +31,11 @@ instead:
 As a Claude Code plugin from a local clone:
 
 ```
-/plugin marketplace add ./stack-planner
-/plugin install stack-planner@stack-planner
+/plugin marketplace add ./project-initiator
+/plugin install project-initiator@project-initiator
 ```
 
-Or copy `skills/stack-planner/` into `~/.claude/skills/`.
+Or copy `skills/project-initiator/` into `~/.claude/skills/`.
 
 Web search must be available for current data. Without it the skill says so
 and labels every price and version as unverified.
@@ -71,11 +71,16 @@ the repository in another (say, for an international team)? Just say so.
 
 | Path | What |
 |------|------|
-| `skills/stack-planner/SKILL.md` | the workflow |
-| `skills/stack-planner/references/` | interview, layers, research protocol, scoring, package check, costs and hardware, bootstrap |
-| `skills/stack-planner/assets/templates/` | blueprint and project templates |
+| `skills/project-initiator/SKILL.md` | the workflow |
+| `skills/project-initiator/references/` | interview, layers, research protocol, scoring, package check, costs and hardware, bootstrap |
+| `skills/project-initiator/assets/templates/` | blueprint and project templates |
 | `evals/evals.json` | test prompts used to compare runs with and without the skill |
 
 ## Status
 
 Early version (0.1.0). Test runs and a worked example are in progress.
+Formerly called `stack-planner`.
+
+## Licence
+
+[MIT](LICENSE)

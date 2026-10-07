@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "stack-planner",
+  "name": "project-initiator",
   "description": "Evidence-backed project planning and bootstrapping for AI-assisted development.",
   "owner": {
     "name": "Michael Silhavy"
   },
   "plugins": [
     {
-      "name": "stack-planner",
+      "name": "project-initiator",
       "description": "Turn a software idea into an evidence-backed tech stack, cost and hardware plan, and an agent-ready repository.",
       "source": "./",
       "category": "development"

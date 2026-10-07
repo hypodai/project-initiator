@@ -5,6 +5,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Changed
+- Renamed from `stack-planner` to `project-initiator`: the skill does more
+  than pick a stack — it ends with a bootstrapped, agent-ready project.
+- MIT licence.
 - Language handling is now explicit: the skill detects the user's language
   from their own words and uses it for questions, summaries and every
   generated document; explicit wishes (e.g. chat in one language, repository

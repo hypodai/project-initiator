@@ -1,6 +1,6 @@
-# stack-planner — working on this repository
+# project-initiator — working on this repository
 
-This repo *is* a skill; the product is the text in `skills/stack-planner/`.
+This repo *is* a skill; the product is the text in `skills/project-initiator/`.
 
 - Chat with the maintainer in whatever language they write in; everything
   in the repo (skill, docs, commits) stays in English — the skill is meant
