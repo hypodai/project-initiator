@@ -23,19 +23,25 @@ Adapt the wording to the idea; keep the substance.
 
 1. **What and for whom** — what it does, who uses it, which problem it
    removes. *(Only if the request didn't already say.)*
-2. **Where it runs** — web, iOS, Android, desktop, a physical device, inside
+2. **Purpose** — a personal / hobby / learning project, an internal tool for
+   an organisation, a commercial product you want to sell, or an open-source
+   / portfolio project? *(This sets how much competitor research is worth
+   doing and how much process the repository needs: a weekend project for
+   yourself and a paid product are different jobs. Infer the default from
+   the request.)*
+3. **Where it runs** — web, iOS, Android, desktop, a physical device, inside
    another tool (Slack, Teams, Excel, ERP), API only.
-3. **Scale** — users at launch and in a year; internal team or public.
-4. **Who builds and maintains it** — a non-developer with AI tools, a
+4. **Scale** — users at launch and in a year; internal team or public.
+5. **Who builds and maintains it** — a non-developer with AI tools, a
    developer (which languages?), a team, an agency later?
-5. **Budget** — one-off for building, and monthly for running. Is there a hard
+6. **Budget** — one-off for building, and monthly for running. Is there a hard
    ceiling?
-6. **Timeline and ambition** — first usable version by when; prototype to
+7. **Timeline and ambition** — first usable version by when; prototype to
    validate an idea, or something that must run in production?
-7. **Constraints** — sensitive data (health, money, children, personal data),
+8. **Constraints** — sensitive data (health, money, children, personal data),
    where users are and where data must live (a country or region such as the
    EU, US, UK…), regulated industry, company IT rules, offline use.
-8. **Priorities** — rank these (top three is enough): low cost · speed to
+9. **Priorities** — rank these (top three is enough): low cost · speed to
    launch · simplicity / few vendors · scalability · no lock-in ·
    performance · best-in-class quality · data privacy.
 
@@ -50,10 +56,15 @@ Ask this after round 1 is answered, as the first part of the round-2 message.
 Its purpose is to surface things the user wouldn't think are relevant.
 
 > Before I research: do you have any preferences or specific requirements?
-> For example tools or services you already pay for or have accounts with,
-> things you want to avoid, a language or framework you know, company
+> For example platforms and tools you already work in and like (hosting,
+> backend, database, framework — keep whatever suits you, I'll check it
+> fits rather than argue you out of it), services you already pay for or
+> have accounts with, things you want to avoid, a language you know, company
 > policies, a preferred cloud or region, or anything you've tried before that
 > did or didn't work. "None" is a perfectly good answer.
+
+Stated tools are honoured (see "Stated preferences" in `scoring.md`): they are
+checked against the must-haves, not forced to beat alternatives.
 
 ## Round 2 — targeted follow-ups
 
@@ -113,6 +124,19 @@ that wouldn't change anything is not worth the user's time.
 ### Operations
 - Who fixes it at 2 a.m. if it breaks? Any uptime expectation?
 - Backups and export requirements, audit logs?
+
+### Security
+Ask only what the earlier answers left open — most of it can be inferred from
+the data, the audience and the money involved (`security.md`).
+- Will it be reachable from the public internet, or only from a team / device
+  / home network?
+- What is the worst realistic day: leaked user data, someone else spending
+  your money, a falsified record, the service down? Which of these would
+  hurt most?
+- Will users upload files, enter free text that others see, or will the
+  system fetch URLs or read emails/documents on their behalf?
+- Does anyone besides you get admin access (employees, contractors, an
+  agency)?
 
 ## After round 2
 

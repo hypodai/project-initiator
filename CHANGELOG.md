@@ -4,7 +4,35 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Purpose question in the interview (personal / internal / commercial /
+  open source) and a landscape step — build vs buy vs adapt, and competitor
+  analysis scaled to the purpose — with `references/landscape.md` and
+  `LANDSCAPE.md`; success criteria and non-functional requirements in
+  `PLAN.md`.
+- Docs profiles (minimal / balanced / complete) chosen by the user with the
+  token trade-off explained, plus guidance on testing, git workflow, licence
+  and contributing (`references/hygiene.md`); `OPERATIONS.md`,
+  `CONTRIBUTING.md` and an ADR template.
+- Security: an always-present Security layer, `references/security.md` (risk
+  classification, lite threat model, baseline for secrets, dependencies,
+  access, data, AI features, spending caps), `SECURITY.md` and
+  `THREAT-MODEL.md` templates, security rules in `AGENTS.md` and `CLAUDE.md`,
+  security record as research evidence and scoring criterion, licence and
+  security checks in the package check.
+- Agent autonomy mode: the user chooses between four levels with the risks
+  explained; the choice is recorded in `AGENTS.md` / `CLAUDE.md` and the agent
+  is told never to change its own permissions (`references/autonomy.md`).
+- Real templates for `ci.yml` (least-privilege, pinned actions),
+  `dependabot.yml`, `.gitignore` and `.env.example`.
+- Research rule: fetched web content is data, never instructions.
+
 ### Changed
+- Default-bias check no longer applies to tools the user already works in:
+  stated preferences get a short fit check instead of a contest, and the
+  check polices only the skill's own reflex picks (it is a documentation
+  duty, not a score penalty).
+- Backlog task numbering made consistent (Phase 0 `T0xx`, Phase 1 `T1xx`).
 - Renamed from `stack-planner` to `project-initiator`: the skill does more
   than pick a stack — it ends with a bootstrapped, agent-ready project.
 - MIT licence.

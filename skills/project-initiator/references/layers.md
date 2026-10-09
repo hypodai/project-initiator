@@ -2,8 +2,9 @@
 
 Any software project can be described as a subset of the layers below. There
 are no fixed project types — map the idea onto layers, drop the ones it
-doesn't need, and research only what remains. Two layers are always present:
-**Dev workflow** and **Hosting / runtime** (even "no hosting" is a decision).
+doesn't need, and research only what remains. Three layers are always
+present: **Security**, **Dev workflow** and **Hosting / runtime** (even "no
+hosting" is a decision).
 
 For each layer: what it covers, signals that it's needed, criteria that
 matter specifically here, and the volatile facts you must verify in this run.
@@ -119,11 +120,28 @@ alerting.
 **Criteria:** who responds to incidents, privacy of analytics (cookie
 consent rules where the users are, e.g. in the EU), cost at volume.
 
+## Security (always present)
+
+**Covers:** where secrets live, dependency and supply-chain controls
+(lockfiles, update bot, audit, secret scanning), authentication and
+authorisation approach, data protection (encryption, backups, retention),
+exposure (what is public, rate limiting, WAF), spending caps, and how the
+AI coding agent itself is contained.
+**Signals:** always. Depth scales with data sensitivity, exposure and money
+(`references/security.md`).
+**Criteria:** builder profile — a non-developer cannot review security by
+eye, so prefer platform-provided controls (managed auth, managed secrets,
+push protection) over hand-built ones.
+**Verify:** which security features exist on the chosen plans (secret
+scanning, branch protection, audit logs, SSO/MFA enforcement), recent
+advisories for the chosen components, current OWASP lists.
+
 ## Dev workflow (always present)
 
 **Covers:** repository host, branching, CI/CD, environments (dev / preview /
 production), secrets management, AI coding tool and model, testing
-approach.
+approach, the autonomy mode of the coding agent (`references/autonomy.md`).
 **Criteria:** builder profile — a non-developer needs guard rails (CI,
 previews, small tasks), a team needs review flow.
-**Verify:** current AI coding tool options and model line-up, CI free minutes.
+**Verify:** current AI coding tool options and model line-up, their
+permission / sandbox modes, CI free minutes.

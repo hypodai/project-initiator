@@ -1,0 +1,12 @@
+# One entry per package ecosystem in the repository; remove the ones you don't use.
+version: 2
+updates:
+  - package-ecosystem: "{{ecosystem}}" # e.g. npm, pip, composer, cargo, gomod
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

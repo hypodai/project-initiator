@@ -1,0 +1,38 @@
+# CI skeleton. Enable the commented steps in task T002, once the scaffold exists.
+# Look up the current release of every action and pin it to its full commit
+# SHA (keep the version in a trailing comment) — a moving tag lets a
+# compromised action run in your pipeline.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least privilege: the default token can only read the repository.
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@{{checkout_sha}} # {{checkout_version}}
+        with:
+          persist-credentials: false
+      # - uses: {{setup_action_for_runtime}}@{{sha}} # {{version}}
+      # - name: Install from the lockfile
+      #   run: {{install_cmd, e.g. npm ci}}
+      # - name: Lint
+      #   run: {{lint_cmd}}
+      # - name: Typecheck
+      #   run: {{typecheck_cmd}}
+      # - name: Test
+      #   run: {{test_cmd}}
+      # - name: Build
+      #   run: {{build_cmd}}
+      # - name: Dependency audit
+      #   run: {{audit_cmd, e.g. npm audit --audit-level=high}}
+      # Secret scanning / static analysis (medium and high risk): add the
+      # step recommended in docs/blueprint/SETUP.md.

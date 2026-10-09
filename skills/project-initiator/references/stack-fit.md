@@ -55,6 +55,15 @@ helps the builder start.
   required region; list them as sub-processors.
 - **Cost coupling** — usage in one component that drives cost in another
   (e.g. every page view calling an AI API).
+- **Licence chain** — do the components' licences fit the project's intended
+  licence and business model (strong copyleft such as GPL/AGPL in a closed
+  product, source-available or "fair-code" terms that restrict commercial
+  use or hosting, paid tiers needed for commercial use)? Verify the licence
+  text, not the badge.
+- **Security chain** — one account compromise that reaches everything (a
+  single GitHub / cloud / registrar login without MFA), shared credentials
+  between environments, components with a poor advisory record
+  (`research.md`).
 
 ## Output (STACK-FIT.md)
 

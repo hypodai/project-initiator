@@ -22,9 +22,24 @@ instead:
 5. **Maps hardware and costs** — what to buy or rent; monthly costs at build,
    launch and growth, including where free tiers end.
 6. **Bootstraps the project** — a GitHub-structured folder (optionally a
-   private GitHub repo) with `AGENTS.md`, `CLAUDE.md`, backlog, changelog,
-   ADRs and the full research in `docs/blueprint/`, so an AI agent can start
-   on task `T001` straight away.
+   private GitHub repo) with `AGENTS.md`, `CLAUDE.md`, `SECURITY.md`,
+   backlog, changelog, ADRs and the full research in `docs/blueprint/`, so an
+   AI agent can start on task `T001` straight away.
+
+Along the way it also:
+
+- **checks whether you need to build at all** — buy / adapt / build, and for
+  commercial products the competition; personal projects skip the market
+  analysis
+- **keeps the tools you already like** — your stack is checked against your
+  requirements, not forced to win a contest
+- **lets you choose the process weight** — a minimal, balanced or complete
+  documentation profile, with the token cost of each explained
+- **builds security in** — secrets, dependencies, access, spending caps and
+  a lite threat model, written into the agent's instructions
+- **asks how autonomous the coding agent should be**, explains the risks of
+  each level and records your choice for the agent to follow (you switch the
+  mode yourself in your tool)
 
 ## Install
 
@@ -58,21 +73,26 @@ the repository in another (say, for an international team)? Just say so.
 
 ```
 <project>/
-├── AGENTS.md, CLAUDE.md, README.md, CHANGELOG.md, .gitignore
+├── AGENTS.md, CLAUDE.md, README.md, CHANGELOG.md, SECURITY.md
+├── .gitignore, .env.example
 ├── .github/                PR and issue templates, CI skeleton, dependabot
 └── docs/
-    ├── blueprint/          PLAN, DECISIONS, STACK-FIT, ARCHITECTURE,
-    │                       HARDWARE, COSTS, SETUP, RISKS, SOURCES
+    ├── blueprint/          PLAN, LANDSCAPE, DECISIONS, STACK-FIT,
+    │                       ARCHITECTURE, HARDWARE, COSTS, SETUP, RISKS,
+    │                       SOURCES (+ THREAT-MODEL, OPERATIONS by profile)
     ├── backlog/            QUEUE.md + task files
-    └── adr/                0001 practice, 0002 technology stack
+    └── adr/                0001 practice, 0002 technology stack, template
 ```
+
+What is included beyond the core depends on the documentation profile you
+choose (`minimal`, `balanced`, `complete`).
 
 ## Repository layout
 
 | Path | What |
 |------|------|
 | `skills/project-initiator/SKILL.md` | the workflow |
-| `skills/project-initiator/references/` | interview, layers, research protocol, scoring, package check, costs and hardware, bootstrap |
+| `skills/project-initiator/references/` | interview, layers, landscape, research protocol, scoring, package check, costs and hardware, security, hygiene (profiles, testing, git, licence), agent autonomy, bootstrap |
 | `skills/project-initiator/assets/templates/` | blueprint and project templates |
 | `evals/evals.json` | test prompts used to compare runs with and without the skill |
 

@@ -1,0 +1,31 @@
+# Stored without the dot so packaging keeps it; written to .gitignore.
+# Start from this baseline, then append the official ignore template for the
+# chosen stack (github.com/github/gitignore) below the marker.
+
+# Secrets and local configuration — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+credentials*.json
+service-account*.json
+
+# Local agent settings (personal, not shared)
+.claude/settings.local.json
+.claude/*.local.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temp
+*.log
+tmp/
+
+# ---- stack-specific entries below ----
+{{stack_gitignore}}

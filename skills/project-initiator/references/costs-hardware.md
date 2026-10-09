@@ -20,7 +20,8 @@ success. The cost model exists to show both before they happen.
 - **Usage-based:** compute, database, storage, bandwidth/egress, AI tokens,
   emails, SMS, push, maps, transcription.
 - **Optional people cost:** professional review before production, if
-  `RISKS.md` recommends it.
+  `RISKS.md` recommends it; for high-risk projects (`security.md`) a security
+  review or penetration test.
 
 ### Method
 
@@ -37,6 +38,14 @@ success. The cost model exists to show both before they happen.
 
 Anything not backed by a source fetched today is labelled `UNVERIFIED
 estimate`. Never round an unknown into a confident-looking number.
+
+### Cost guards
+
+For every usage-billed service, record whether it supports billing alerts and
+a hard cap (verify on its pricing / billing docs) and the amount to set — a
+leaked key or a runaway loop is the typical way a small project gets a large
+bill. Services without a cap are a risk to note in `RISKS.md`. The setup task
+(`SETUP.md`) enables them before anything else is created.
 
 ### AI costs
 

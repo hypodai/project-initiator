@@ -5,4 +5,5 @@
 | [0001](0001-record-architecture-decisions.md) | Record architecture decisions | {{date}} | accepted |
 | [0002](0002-technology-stack.md) | Technology stack | {{date}} | accepted |
 
-New ADR: copy the structure of 0002, next free number.
+New ADR: copy `template.md`, next free number. Which decisions deserve one
+depends on the docs profile (see `AGENTS.md`).

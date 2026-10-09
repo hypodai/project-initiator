@@ -13,3 +13,14 @@ Status: `ready` | `in_progress` | `blocked` | `done`
 | S007 | Publication: licence MIT (decided); public repo waits for the maintainer's go | P2 | blocked — maintainer |
 | S008 | Any-language output with explicit overrides; remove personal and locale-specific assumptions | P0 | done |
 | S009 | Rename `stack-planner` → `project-initiator`, MIT licence | P1 | done |
+| S010 | Purpose question + landscape step (build/buy/adapt, competitors scaled to purpose), success criteria | P0 | done |
+| S011 | Respect user-stated tools: default-bias check only for the skill's own picks | P0 | done |
+| S012 | Docs profiles (minimal/balanced/complete), testing, git workflow, licence, contributing | P0 | done |
+| S013 | Security: layer, reference, SECURITY.md, threat model, agent rules, cost guards | P0 | done |
+| S014 | Agent autonomy mode: levels, risk explanation, recorded in AGENTS.md | P0 | done |
+| S015 | Real templates: ci.yml, dependabot.yml, .gitignore, .env.example, ADR template; task numbering fix | P1 | done |
+| S016 | Add evals 9–12 for S010–S014 and run all evals with and without the skill (extends S002) | P0 | ready |
+| S017 | Self-check script: leftover `{{…}}`, `[S#]` references, secrets patterns, mermaid validity | P1 | ready |
+| S018 | Refresh mode: re-verify prices and "Revisit when" conditions of an existing blueprint | P2 | ready |
+| S019 | Adopt mode: audit an existing repository and add AGENTS.md, SECURITY.md, ADRs, backlog | P2 | ready |
+| S020 | Optional agent set: `.claude/agents/` (reviewer, security-reviewer, docs-keeper) templates | P2 | ready |
