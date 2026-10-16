@@ -3,7 +3,7 @@
   "name": "project-initiator",
   "description": "Evidence-backed project planning and bootstrapping for AI-assisted development.",
   "owner": {
-    "name": "Michael Silhavy"
+    "name": "Michael Šilhavý"
   },
   "plugins": [
     {
