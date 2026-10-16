@@ -9,7 +9,7 @@ Status: `ready` | `in_progress` | `blocked` | `done`
 | S003 | Iterate on the skill from eval results | P0 | ready |
 | S004 | Worked example in `examples/` (fitness app) for README and LinkedIn | P1 | ready |
 | S005 | Trigger-description optimisation (should / shouldn't trigger set) | P2 | ready |
-| S006 | GitHub repository (`gh` is authenticated now; public or private is S007) | P1 | blocked |
+| S006 | GitHub repository — private `hypodai/project-initiator`, pushed 2026-10-16; going public is S007 | P1 | done |
 | S007 | Publication: licence MIT (decided); public repo waits for the maintainer's go | P2 | blocked — maintainer |
 | S008 | Any-language output with explicit overrides; remove personal and locale-specific assumptions | P0 | done |
 | S009 | Rename `stack-planner` → `project-initiator`, MIT licence | P1 | done |
