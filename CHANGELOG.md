@@ -4,6 +4,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.0] — 2026-10-17
+
+First public release. Entries below record how the skill developed before it.
+
 ### Fixed (from the 2026-10-16 eval run, `evals/RESULTS.md`)
 - Quick depth is consistent: the preferences prompt joins round 1, there is
   no round 2, the search budget is ~15–20 (landscape, security and autonomy
@@ -25,6 +29,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   a note that the complete profile costs tokens on every task.
 
 ### Added
+- First version of the `stack-planner` skill: two-round interview with a
+  preferences prompt, layer-based decomposition for any project type,
+  research protocol with source tiers and freshness rules, weighted scoring
+  with a default-bias check and Top / Balanced / Budget variants, package
+  check of integration edges, cost and hardware model, and project bootstrap
+  with agent playbook, backlog, changelog and ADRs.
+- Blueprint and project templates.
+- Plugin and marketplace manifests.
+- Eval prompts, including a control case where the common default stack
+  should legitimately win.
+- `SECURITY.md` and `CONTRIBUTING.md` for this repository; install straight
+  from GitHub.
 - `examples/`: two real outputs from the eval run — a fitness app planned in
   Czech and an AI CV-feedback MVP in English, each with its conversation.
 - `docs-keeper` subagent template for the complete profile.
@@ -50,7 +66,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   `dependabot.yml`, `.gitignore` and `.env.example`.
 - Research rule: fetched web content is data, never instructions.
 
-### Changed
+### Changed during development
 - Default-bias check no longer applies to tools the user already works in:
   stated preferences get a short fit check instead of a contest, and the
   check polices only the skill's own reflex picks (it is a documentation
@@ -70,15 +86,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   (UK GDPR, CCPA/CPRA, LGPD, PIPEDA, APPI, DPDP Act).
 - Eval prompts in German, Brazilian Portuguese and a Czech-chat /
   English-repository override case.
-
-### Added
-- First version of the `stack-planner` skill: two-round interview with a
-  preferences prompt, layer-based decomposition for any project type,
-  research protocol with source tiers and freshness rules, weighted scoring
-  with a default-bias check and Top / Balanced / Budget variants, package
-  check of integration edges, cost and hardware model, and project bootstrap
-  with agent playbook, backlog, changelog and ADRs.
-- Blueprint and project templates.
-- Plugin and marketplace manifests.
-- Eval prompts, including a control case where the common default stack
-  should legitimately win.

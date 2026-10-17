@@ -43,14 +43,19 @@ Along the way it also:
 
 ## Install
 
-As a Claude Code plugin from a local clone:
+As a Claude Code plugin, straight from GitHub:
 
 ```
-/plugin marketplace add ./project-initiator
+/plugin marketplace add hypodai/project-initiator
 /plugin install project-initiator@project-initiator
 ```
 
-Or copy `skills/project-initiator/` into `~/.claude/skills/`.
+Or clone the repository and copy `skills/project-initiator/` into
+`~/.claude/skills/` (personal) or `.claude/skills/` (one project).
+
+The skill is plain Markdown in the open
+[Agent Skills](https://agentskills.io) format, so other agents that read
+`SKILL.md` skills can use the same folder.
 
 Web search must be available for current data. Without it the skill says so
 and labels every price and version as unverified.
@@ -101,11 +106,30 @@ answers without the skill is in [`evals/RESULTS.md`](evals/RESULTS.md).
 | `skills/project-initiator/references/` | interview, layers, landscape, research protocol, scoring, package check, costs and hardware, security, hygiene (profiles, testing, git, licence), agent autonomy, bootstrap |
 | `skills/project-initiator/assets/templates/` | blueprint and project templates |
 | `evals/evals.json` | test prompts used to compare runs with and without the skill |
+| `evals/RESULTS.md` | results of the eval runs |
 
 ## Status
 
-Early version (0.1.0). Test runs and a worked example are in progress.
+**0.1.0 — first public release.** Two of the twelve eval prompts have been
+run with and without the skill (Czech and English); the defects they found
+are fixed. The other prompts — among them B2B SaaS, invoice automation, an IoT
+device, apps in German and Brazilian Portuguese, and a Czech-chat /
+English-repository override — have not been run yet. Reports
+from real use are the most useful feedback: see
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 Formerly called `stack-planner`.
+
+## How this was built
+
+Designed and directed by [Michael Šilhavý](https://michaelsilhavyai.vercel.app),
+a technology consultant, from the way he plans projects for clients: ask
+first, check the market, write the decision down. The text of the skill was
+written with Claude Code, and its behaviour was checked by running it
+against plain answers from the same model — the comparison, including where
+the skill fell short, is in [`evals/RESULTS.md`](evals/RESULTS.md).
+
+Security problems: see [`SECURITY.md`](SECURITY.md).
 
 ## Licence
 

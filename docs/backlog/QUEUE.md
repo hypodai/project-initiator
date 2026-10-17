@@ -5,12 +5,12 @@ Status: `ready` | `in_progress` | `blocked` | `done`
 | ID | Task | Priority | Status |
 |----|------|----------|--------|
 | S001 | First version: SKILL.md, references, templates, manifests, eval prompts | P0 | done |
-| S002 | Run evals with and without the skill; grade and compare | P0 | ready |
-| S003 | Iterate on the skill from eval results | P0 | ready |
+| S002 | Run evals with and without the skill; grade and compare | P0 | done — superseded by S016 |
+| S003 | Iterate on the skill from eval results | P0 | done — superseded by S021 |
 | S004 | Worked examples in `examples/` — fitness app (CZ) and CV-feedback MVP (EN) from the eval run | P1 | done |
 | S005 | Trigger-description optimisation (should / shouldn't trigger set) | P2 | ready |
 | S006 | GitHub repository — private `hypodai/project-initiator`, pushed 2026-10-16; going public is S007 | P1 | done |
-| S007 | Publication: licence MIT (decided); public repo waits for the maintainer's go | P2 | blocked — maintainer |
+| S007 | Publication: MIT, public repo `hypodai/project-initiator`, SECURITY.md, CONTRIBUTING.md, release v0.1.0 (2026-10-17) | P1 | done |
 | S008 | Any-language output with explicit overrides; remove personal and locale-specific assumptions | P0 | done |
 | S009 | Rename `stack-planner` → `project-initiator`, MIT licence | P1 | done |
 | S010 | Purpose question + landscape step (build/buy/adapt, competitors scaled to purpose), success criteria | P0 | done |

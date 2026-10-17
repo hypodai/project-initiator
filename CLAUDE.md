@@ -16,5 +16,5 @@ This repo *is* a skill; the product is the text in `skills/project-initiator/`.
   in `evals/evals.json` when behaviour could change (with and without the
   skill, compare).
 - Backlog: `docs/backlog/QUEUE.md`, one task at a time, commit `Sxxx: …`.
-- Don't make the repo public or add a licence without the maintainer's
+- Don't change the licence or the repository visibility without the maintainer's
   explicit decision.
