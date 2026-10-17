@@ -19,8 +19,9 @@ Status: `ready` | `in_progress` | `blocked` | `done`
 | S013 | Security: layer, reference, SECURITY.md, threat model, agent rules, cost guards | P0 | done |
 | S014 | Agent autonomy mode: levels, risk explanation, recorded in AGENTS.md | P0 | done |
 | S015 | Real templates: ci.yml, dependabot.yml, .gitignore, .env.example, ADR template; task numbering fix | P1 | done |
-| S016 | Add evals 9–12 for S010–S014 and run all evals with and without the skill (extends S002) | P0 | ready |
+| S016 | Run evals with and without the skill — evals 1 and 4 done 2026-10-16 (`evals/RESULTS.md`); 9–12 still to run | P0 | in_progress |
 | S017 | Self-check script: leftover `{{…}}`, `[S#]` references, secrets patterns, mermaid validity | P1 | ready |
 | S018 | Refresh mode: re-verify prices and "Revisit when" conditions of an existing blueprint | P2 | ready |
 | S019 | Adopt mode: audit an existing repository and add AGENTS.md, SECURITY.md, ADRs, backlog | P2 | ready |
 | S020 | Optional agent set: `.claude/agents/` (reviewer, security-reviewer, docs-keeper) templates | P2 | ready |
+| S021 | Fix the 11 defects found by the 2026-10-16 eval run (see `evals/RESULTS.md`) | P0 | ready |
