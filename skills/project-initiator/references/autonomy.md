@@ -104,6 +104,10 @@ files, for example:
 
 This is an illustration — check the current schema and syntax in the docs
 before writing it, tailor the allowlist to the chosen stack's commands, and
-write it only if the user agrees. Equivalent mechanisms for other tools
+write it only if the user agrees. If the builder works on Windows, the tool
+may run commands through PowerShell rather than Bash; mirror each `Bash(…)`
+rule for the other shell the tool uses, or the allowlist silently won't
+apply. The mode itself (`defaultMode`) is not written here — the user sets
+it in the tool. Equivalent mechanisms for other tools
 (approval policies, sandbox settings, ignore files) are looked up the same
 way.

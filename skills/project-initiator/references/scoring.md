@@ -30,6 +30,15 @@ rank 1 → weight 3, rank 2 → 2, rank 3 → 1.5, unranked → 1. "Simplicity /
 few vendors" feeds Time to ship and Integration; "no lock-in" feeds Exit;
 "data privacy" feeds Compliance.
 
+Two adjustments keep the weights honest:
+
+- When two ranked priorities feed the same criterion (e.g. "speed to launch"
+  and "simplicity" both feed Time to ship), the criterion takes the **higher**
+  weight, not the sum — otherwise one concern is counted twice.
+- **Fit never goes below weight 2.** Nobody ranks it because it is the point
+  of the whole exercise; a tool that doesn't cover the project's needs can't
+  win on price or popularity.
+
 Every score needs a reason with a source reference. A cell without a reason
 is a guess — either find evidence or write `UNVERIFIED`.
 
@@ -94,6 +103,27 @@ Rules:
 4. Popularity counts only through its concrete effects: documentation,
    hiring pool, integrations, how well AI assistants know it. Put those in
    the matching criteria; "everyone uses it" is not a criterion.
+5. **Quick depth.** Only the 3–4 core layers are researched, so rule 1 can't
+   hold everywhere. On the other layers a reflex pick may stand as
+   **provisional**: name two alternatives with one line each, write
+   "not researched — quick depth" instead of scores, and add a backlog task
+   to confirm the pick before that layer is built. Say in the step-8 summary
+   which layers are provisional. Core layers still get the full comparison.
+
+### When the evidence ties
+
+Sometimes candidates come out level on everything that can be looked up and
+the difference only shows in use — AI model quality for this task is the
+typical case, latency under real load another. Don't invent scores to break
+the tie. Make a **provisional pick** by the tie rules below (fewer vendors,
+better exit, more proven), keep the switch cheap (a gateway, an adapter, one
+config value), and add a backlog task that decides by measurement — e.g. a
+small fixed evaluation set. Write it in `DECISIONS.md` as "decided by
+measurement in Txxx".
+
+If you are an AI model and the candidates include models from your own
+vendor, say so in `DECISIONS.md`: self-preference is a known bias, and the
+measurement task is the remedy.
 
 ## 4. Variants
 

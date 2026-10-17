@@ -24,4 +24,4 @@ Status: `ready` | `in_progress` | `blocked` | `done`
 | S018 | Refresh mode: re-verify prices and "Revisit when" conditions of an existing blueprint | P2 | ready |
 | S019 | Adopt mode: audit an existing repository and add AGENTS.md, SECURITY.md, ADRs, backlog | P2 | ready |
 | S020 | Optional agent set: `.claude/agents/` (reviewer, security-reviewer, docs-keeper) templates | P2 | ready |
-| S021 | Fix the 11 defects found by the 2026-10-16 eval run (see `evals/RESULTS.md`) | P0 | ready |
+| S021 | Fix the 11 defects found by the 2026-10-16 eval run (see `evals/RESULTS.md`) | P0 | done |

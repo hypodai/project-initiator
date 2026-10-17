@@ -26,7 +26,9 @@ Defaults by purpose: personal → **minimal** (offer balanced); internal and
 open-source/portfolio → **balanced**; commercial → **balanced**, or
 **complete** when payments, health or children's data, multi-tenancy or a
 team are involved. Say what the default is and why; the user can mix (e.g.
-balanced plus the threat model off).
+balanced plus the threat model off). If the user's budget is tight, say that
+tokens are part of it: complete costs noticeably more on every task, and
+balanced plus the threat model is often the better trade.
 
 Present it as a trade-off: *"complete keeps the documentation trustworthy
 as the project grows, at the price of extra tokens and a slower pace on
@@ -74,8 +76,13 @@ sometimes more ceremony than it is worth.
 | **A. main-only** | personal / hobby, minimal | commit straight to `main` after each task; CI must stay green; tag working states |
 | **B. task branch + PR** (default for balanced and complete) | everything else | `main` protected (verify what the repository's plan allows); branch `txxx-short-name` per task; PR with the template; CI green; squash merge; the person merges (or explicitly delegates) |
 
-In both: commits `Txxx: summary`, no force-push, no history rewrite (hard
-gate). **Complete** adds SemVer tags and a release checklist (changelog
+**B needs a remote** to hold the pull requests and the branch protection. If
+the user creates no remote yet, start with **A**, add a backlog task "move to
+workflow B once the repository has a remote", and say so in `AGENTS.md` —
+don't simulate PRs with local branches.
+
+In both: commits `Txxx: summary` (the bootstrap commit is `T000: …`),
+no force-push, no history rewrite (hard gate). **Complete** adds SemVer tags and a release checklist (changelog
 moved from `[Unreleased]`, tag, deploy, verify, rollback path). Conventional
 Commits are optional; only suggest them if release automation is planned.
 

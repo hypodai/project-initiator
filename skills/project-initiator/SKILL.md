@@ -93,12 +93,14 @@ another level at any point.
 
 | Depth | Interview | Research | Typical effort |
 |-------|-----------|----------|----------------|
-| quick | round 1 only, defaults for the rest | 2–3 candidates on the 3–4 layers that matter most | ~10 searches |
+| quick | round 1 with the preferences question appended; no round 2 | 2–3 candidates on the 3–4 core layers; other layers get provisional picks (`scoring.md`) | ~15–20 searches |
 | standard | both rounds | 3–5 candidates on every relevant layer, package check | ~30–50 searches |
 | deep | both rounds | standard + compatibility probe on every integration edge, review sentiment, all variants fully costed, parallel subagents | 80+ searches |
 
 Tell the user which depth you are using and roughly how long it will take
-before you start researching.
+before you start researching. The budgets include the landscape, security and
+autonomy look-ups, not just the layer research — at quick depth those alone
+take about a third.
 
 ## Workflow
 
@@ -117,7 +119,9 @@ user already answered.
 
 ### 3. Preferences and round 2
 
-After round 1 is answered:
+At **quick** depth there is no round 2: put the preferences prompt at the end
+of the round-1 message, map the layers yourself and turn the follow-ups into
+stated assumptions. At standard and deep depth, after round 1 is answered:
 
 1. Map the project onto layers (`references/layers.md`). Only layers the
    project actually has are in play.
@@ -144,7 +148,9 @@ wins on the user's own priorities, say so and ask before spending the layer
 research; building anyway is the user's call. Also derive the success
 criteria and the security classification (`references/security.md`).
 
-Then follow `references/research.md`. For each layer, write down your **prior** —
+Then follow `references/research.md`, with the reflex list from
+`references/scoring.md` (section 3) at hand — discovery needs it to include a
+non-reflex candidate. For each layer, write down your **prior** —
 the tool you would have picked without research — before searching. Then
 discover candidates through search, not memory, and collect evidence. At deep
 depth, research layer groups in parallel with subagents if you can spawn them.
@@ -208,19 +214,27 @@ Before handing over, verify:
   and `COSTS.md`, and nothing appears in those that is missing from the
   architecture
 - every volatile fact (price, limit, version) carries a source reference that
-  exists in `SOURCES.md`, dated today, or is labelled `UNVERIFIED`
+  exists in `SOURCES.md`, dated with the day it was researched, or is
+  labelled `UNVERIFIED` — a run resumed on a later day keeps the research
+  dates and says so at the top of `SOURCES.md`
+- every source in `SOURCES.md` is cited at least once
 - every layer in `DECISIONS.md` shows the rejected candidates and why
-- every reflex pick passed the default-bias check in writing
+- every reflex pick passed the default-bias check in writing, or — at quick
+  depth, outside the core layers — is marked provisional with a backlog task
+  to confirm it
 - mermaid diagrams are syntactically valid
 - the backlog's first tasks match `SETUP.md` order
 - `AGENTS.md` contains the stack, the industry-specific practices from
   `RISKS.md`, the hard gates relevant to this project, the security
   essentials, the agreed autonomy mode and exactly the docs upkeep of the
-  chosen profile — and stays lean
+  chosen profile — and stays within the profile's length target
+  (`references/bootstrap.md`)
 - `SECURITY.md` exists, `CLAUDE.md` carries the top security rules, and
   secrets, MFA and spending caps are tasks in the first phase
-- no leftover `{{…}}` placeholders anywhere; files the profile excludes are
-  not present as empty shells
+- no leftover `{{…}}` placeholders, except in `docs/adr/template.md`, which
+  is meant to stay a template (GitHub Actions `${{ … }}` expressions are code,
+  not placeholders); files the profile excludes are not present as empty
+  shells
 - no file in the project contains a secret, a token or a real credential
 - every document is in the agreed language, with no untranslated template
   prose left over
@@ -245,7 +259,7 @@ by telling the agent (which updates `AGENTS.md`).
 | `references/landscape.md` | step 4, first |
 | `references/research.md` | step 4 |
 | `references/security.md` | steps 4 and 9 |
-| `references/scoring.md` | step 5 |
+| `references/scoring.md` | step 4 (reflex list, section 3) and step 5 |
 | `references/stack-fit.md` | step 6 |
 | `references/costs-hardware.md` | step 7 |
 | `references/hygiene.md` | steps 8–9 |

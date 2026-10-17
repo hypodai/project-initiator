@@ -77,3 +77,6 @@ baseline.
     different days.
 11. Quick budget (~10 searches) is too tight once landscape, security and
     autonomy lookups are added — both runs needed ~18.
+
+All eleven defects were fixed in S021 (see `CHANGELOG.md`, "Fixed"). A re-run
+of evals 1 and 4 has not been done yet.

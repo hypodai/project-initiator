@@ -4,7 +4,28 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed (from the 2026-10-16 eval run, `evals/RESULTS.md`)
+- Quick depth is consistent: the preferences prompt joins round 1, there is
+  no round 2, the search budget is ~15–20 (landscape, security and autonomy
+  look-ups included), and reflex picks outside the 3–4 core layers may stand
+  as provisional with two named alternatives and a confirmation task.
+- The reflex list is read in step 4, where discovery needs it.
+- Weights: two priorities feeding one criterion take the higher weight, and
+  Fit never drops below 2.
+- New "when the evidence ties" rule: provisional pick, cheap switch, decide
+  by measurement in a backlog task; AI models flag self-preference when
+  choosing among their own vendor's models.
+- `AGENTS.md` length targets per docs profile instead of one unreachable
+  ~200-line cap.
+- Self-check: placeholders allowed in `docs/adr/template.md`, research dates
+  kept on resumed runs, unused sources flagged, provisional picks accepted.
+- Bootstrap commit `T000: …` follows the `Txxx:` convention; workflow B
+  waits for a remote instead of simulating PRs locally.
+- Windows: permission allowlists mirrored for PowerShell; tight budgets get
+  a note that the complete profile costs tokens on every task.
+
 ### Added
+- `docs-keeper` subagent template for the complete profile.
 - Purpose question in the interview (personal / internal / commercial /
   open source) and a landscape step — build vs buy vs adapt, and competitor
   analysis scaled to the purpose — with `references/landscape.md` and

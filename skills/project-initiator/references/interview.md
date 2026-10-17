@@ -53,7 +53,9 @@ Example of the expected format:
 ## Preferences prompt (start of round 2)
 
 Ask this after round 1 is answered, as the first part of the round-2 message.
-Its purpose is to surface things the user wouldn't think are relevant.
+At **quick** depth there is no round 2 — append it as the last item of the
+round-1 message instead. Its purpose is to surface things the user wouldn't
+think are relevant.
 
 > Before I research: do you have any preferences or specific requirements?
 > For example platforms and tools you already work in and like (hosting,

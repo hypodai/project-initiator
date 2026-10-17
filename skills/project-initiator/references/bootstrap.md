@@ -101,6 +101,7 @@ Templates live in `assets/templates/`:
 | `project/adr/*` | `docs/adr/` |
 | `project/github/*` | `.github/` (stored without the dot so packaging keeps it) |
 | `project/gitignore`, `project/env.example` | `.gitignore`, `.env.example` (stored without the dot) |
+| `project/claude/agents/docs-keeper.md` | `.claude/agents/docs-keeper.md`, **complete** profile only (stored without the dot) |
 
 `ci.yml` and `dependabot.yml` are skeletons: fill the ecosystem, and look up
 and pin the current release of every GitHub Action (see the comments in the
@@ -146,9 +147,12 @@ Fill it from the blueprint:
 - **Session loop and Definition of Done** — keep; adjust the verification
   commands (`typecheck`, `test`, `build`) to the chosen stack.
 
-Keep the finished `AGENTS.md` lean (target well under ~200 lines): it is
-loaded at the start of every session. Detail belongs in `SECURITY.md` and the
-blueprint, which the agent reads on demand.
+Keep the finished `AGENTS.md` lean: it is loaded at the start of every
+session, so every line is paid for again and again. Targets by profile:
+**minimal ~120 lines, balanced ~180, complete ~250** (high-risk projects may
+add ~20 for their rules). Past the target, move detail into `SECURITY.md`,
+`docs/blueprint/` or a task file and leave a one-line link — the agent reads
+those on demand.
 
 `CLAUDE.md` carries the settings and the five security rules inline, so they
 apply even if nothing else is read.
@@ -215,6 +219,8 @@ advice; say so in `RISKS.md`.
 
 1. `git init -b main`, stage everything (check first that no secret or `.env`
    is among the staged files), commit
-   `chore: bootstrap project from project-initiator blueprint` — if the user agreed.
+   `T000: bootstrap project from project-initiator blueprint` — if the user
+   agreed. `T000` keeps the bootstrap in the project's `Txxx:` convention
+   without being a backlog task.
 2. If agreed and authenticated: `gh repo create <name> --private --source . --push`.
 3. Run the self-check from `SKILL.md` step 10.
