@@ -25,6 +25,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   a note that the complete profile costs tokens on every task.
 
 ### Added
+- `examples/`: two real outputs from the eval run — a fitness app planned in
+  Czech and an AI CV-feedback MVP in English, each with its conversation.
 - `docs-keeper` subagent template for the complete profile.
 - Purpose question in the interview (personal / internal / commercial /
   open source) and a landscape step — build vs buy vs adapt, and competitor

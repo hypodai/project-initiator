@@ -1,0 +1,59 @@
+# Tajemství a lokální konfigurace — nikdy necommitovat
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+*.mobileprovision
+secrets/
+credentials*.json
+service-account*.json
+google-services.json
+GoogleService-Info.plist
+
+# Lokální nastavení agenta (osobní, nesdílí se)
+.claude/settings.local.json
+.claude/*.local.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logy a dočasné soubory
+*.log
+tmp/
+
+# ---- položky pro stack (Node.js, Expo, Supabase) ----
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Nativní složky generuje `expo prebuild` / EAS (Continuous Native Generation)
+mobile/ios/
+mobile/android/
+
+# Metro
+.metro-health-check*
+
+# TypeScript
+*.tsbuildinfo
+
+# Testy
+coverage/
+
+# Supabase (lokální běh)
+supabase/.branches/
+supabase/.temp/

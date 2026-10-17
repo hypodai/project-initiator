@@ -87,11 +87,17 @@ the repository in another (say, for an international team)? Just say so.
 What is included beyond the core depends on the documentation profile you
 choose (`minimal`, `balanced`, `complete`).
 
+**See it for real:** [`examples/`](examples/) has two complete outputs — a
+fitness app planned in Czech and an AI CV-feedback MVP in English — each with
+the full conversation, and how they were made. The comparison against plain
+answers without the skill is in [`evals/RESULTS.md`](evals/RESULTS.md).
+
 ## Repository layout
 
 | Path | What |
 |------|------|
 | `skills/project-initiator/SKILL.md` | the workflow |
+| `examples/` | two real outputs of the skill, with conversations |
 | `skills/project-initiator/references/` | interview, layers, landscape, research protocol, scoring, package check, costs and hardware, security, hygiene (profiles, testing, git, licence), agent autonomy, bootstrap |
 | `skills/project-initiator/assets/templates/` | blueprint and project templates |
 | `evals/evals.json` | test prompts used to compare runs with and without the skill |

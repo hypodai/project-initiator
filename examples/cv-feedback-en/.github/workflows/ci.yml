@@ -1,0 +1,40 @@
+# CI skeleton. Enable the commented steps in task T002, once the scaffold exists.
+# Actions are pinned to full commit SHAs (version in the trailing comment),
+# looked up on 2026-10-16 — a moving tag lets a compromised action run here.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least privilege: the default token can only read the repository.
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      #   with:
+      #     node-version: lts/*
+      #     cache: npm
+      # - name: Install from the lockfile
+      #   run: npm ci
+      # - name: Lint
+      #   run: npm run lint
+      # - name: Typecheck
+      #   run: npx tsc --noEmit
+      # - name: Test
+      #   run: npm test
+      # - name: Build
+      #   run: npm run build
+      # - name: Dependency audit
+      #   run: npm audit --audit-level=high
+      # Static analysis (medium risk): add CodeQL or the equivalent step from
+      # docs/blueprint/SETUP.md §5 once its availability for this repo is checked.
