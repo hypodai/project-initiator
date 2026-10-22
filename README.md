@@ -120,16 +120,9 @@ from real use are the most useful feedback: see
 
 Formerly called `stack-planner`.
 
-## How this was built
+## Security
 
-Designed and directed by [Michael Šilhavý](https://michaelsilhavyai.vercel.app),
-a technology consultant, from the way he plans projects for clients: ask
-first, check the market, write the decision down. The text of the skill was
-written with Claude Code, and its behaviour was checked by running it
-against plain answers from the same model — the comparison, including where
-the skill fell short, is in [`evals/RESULTS.md`](evals/RESULTS.md).
-
-Security problems: see [`SECURITY.md`](SECURITY.md).
+Found a security problem? See [`SECURITY.md`](SECURITY.md).
 
 ## Licence
 

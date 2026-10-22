@@ -4,6 +4,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Removed
+- README: the "How this was built" section; the security pointer is its own
+  short section now.
+
 ## [0.1.0] — 2026-10-17
 
 First public release. Entries below record how the skill developed before it.
