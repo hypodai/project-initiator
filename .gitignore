@@ -9,3 +9,6 @@ Thumbs.db
 .idea/
 
 .env*
+
+# Claude Code local settings (personal permissions, never commit)
+.claude/settings.local.json
